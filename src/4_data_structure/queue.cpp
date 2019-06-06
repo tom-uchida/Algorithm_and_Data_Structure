@@ -32,11 +32,13 @@ int head, tail, n;
 void enqueue(P x) {
     Q[tail] = x;
     tail = (tail + 1) % LEN;
+    std::cout << "tail : " << tail << std::endl;
 }
 
 P dequeue() {
     P x = Q[head];
     head = (head + 1) % LEN;
+    std::cout << "head : " << head << std::endl;
     return x;
 }
 
